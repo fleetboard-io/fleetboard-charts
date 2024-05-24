@@ -19,6 +19,7 @@ hub:
 
 tunnel:
   endpoint: 121.41.31.123
+  # global cidr
   cidr: 10.112.0.0/12
 
 serviceAccount:
