@@ -1,8 +1,8 @@
-{{- if .Values.cluster.hub -}}
 apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Chart.Name }}
+  namespace: nauti-system
   labels:
     app: {{ .Chart.Name }}
 spec:
@@ -14,5 +14,5 @@ spec:
       name: udp
       nodePort: {{ .Values.service.nodePort }}
   selector:
-    app: {{ .Chart.Name }}
-{{- end }}
+    app: cnf-nauti
+    router.nauti.io/leader: "true"
