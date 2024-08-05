@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   nauti:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2024-08-05T01:33:01.743090975Z"
+    description: A Helm chart for Tunnel across clusters.
+    digest: f2876b7fdbffc93bffe2863d986eb89056efb5b4ccd29558ac47cea1582167e7
+    name: nauti
+    type: application
+    urls:
+    - https://github.com/nauti-io/nauti-charts/releases/download/nauti-0.1.1/nauti-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2024-05-24T08:17:33.833690958Z"
     description: A Helm chart for Tunnel across clusters.
@@ -13,6 +23,16 @@ entries:
     version: 0.1.0
   nauti-agent:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2024-08-05T01:33:01.865819089Z"
+    description: A Helm chart for Tunnel across clusters.
+    digest: c0f13d435d3a405a579e8a42dc224ba35e61bdf5aa27760af43a810e66e19b47
+    name: nauti-agent
+    type: application
+    urls:
+    - https://github.com/nauti-io/nauti-charts/releases/download/nauti-agent-0.1.1/nauti-agent-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2024-05-24T08:17:33.9361845Z"
     description: A Helm chart for Tunnel across clusters.
@@ -22,4 +42,4 @@ entries:
     urls:
     - https://github.com/nauti-io/nauti-charts/releases/download/nauti-agent-0.1.0/nauti-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-24T08:26:22.598226363Z"
+generated: "2024-08-05T01:33:01.865837253Z"
