@@ -14,7 +14,7 @@ cluster:
   clusterID: cluster1
   sharenamespace: syncer-operator
   localnamespace: syncer-operator
-  zone: hyperos.local
+  zone: fleetboard.local
   ispublic: false
 
 hub:
