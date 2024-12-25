@@ -82,7 +82,7 @@ spec:
             - name: FLEETBOARD_CLUSTERID
               value: {{ .Values.cluster.clusterID }}
             - name: FLEETBOARD_BOOTSTRAPTOKEN
-              value: re51os.131tn13kek2iaqoz
+              value: {{ .Values.hub.bootstraptoken }}
             - name: FLEETBOARD_PODNAME
               valueFrom:
                 fieldRef:
