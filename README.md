@@ -17,7 +17,7 @@ The **Hub Cluster** is responsible for managing child clusters and establishing 
 To install the `fleetboard` chart on the hub:
 
 ```bash
-helm install fleetboard fleetboard/fleetboard --namespace fleetboard-system --create-namespace \
+helm install fleetboard fleetboard/fleetboard --namespace fleetboard-system \
 --set tunnel.endpoint=<Hub Public IP> --set tunnel.cidr=20.112.0.0/12
 ```
 
@@ -35,12 +35,12 @@ helm delete fleetboard -n fleetboard-system
 To set up FleetBoard on a **Child Cluster** for cross-cluster communication, install the `fleetboard-agent` chart:
 
 ```bash
-helm install fleetboard-agent fleetboard/fleetboard-agent --namespace fleetboard-system --create-namespace \
+helm install fleetboard-agent fleetboard/fleetboard-agent --namespace fleetboard-system \
 --set hub.hubURL=https://<Hub Public IP>:6443 --set cluster.clusterID=<Cluster Alias Name>
 ```
 
 - **hub.hubURL**: The full URL (with port `6443`) of the Kubernetes API endpoint of the **Hub Cluster**. This allows the child cluster to register with the hub.
-- **cluster.clusterID**: A unique alias for the child cluster to identify itself when communicating with the hub.
+- **cluster.clusterID**: A unique alias for the child cluster to identify itself when communicating with the hub. Lower case alphanumeric characters or '-' is required.
 
 To uninstall the chart:
 
@@ -76,7 +76,7 @@ helm delete fleetboard-agent -n fleetboard-system
    - For DNS forwarding, you need to configure the child cluster's **CoreDNS** to forward DNS queries related to cross-cluster services to the **crossdns service** running on the child cluster. Add the following block to your CoreDNS configuration on the child cluster:
    
      ```yaml
-     hyperos.local:53 {
+     fleetboard.local:53 {
          forward . <CrossDNS IP>
      }
      ```
