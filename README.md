@@ -17,7 +17,7 @@ The **Hub Cluster** is responsible for managing child clusters and establishing 
 To install the `fleetboard` chart on the hub:
 
 ```bash
-helm install fleetboard fleetboard/fleetboard --namespace fleetboard-system \
+helm install fleetboard fleetboard/fleetboard \
 --set tunnel.endpoint=<Hub Public IP> --set tunnel.cidr=20.112.0.0/12
 ```
 
@@ -27,7 +27,7 @@ helm install fleetboard fleetboard/fleetboard --namespace fleetboard-system \
 To uninstall the chart:
 
 ```bash
-helm delete fleetboard -n fleetboard-system
+helm delete fleetboard
 ```
 
 ### Install/Uninstall FleetBoard on Child Cluster
@@ -35,7 +35,7 @@ helm delete fleetboard -n fleetboard-system
 To set up FleetBoard on a **Child Cluster** for cross-cluster communication, install the `fleetboard-agent` chart:
 
 ```bash
-helm install fleetboard-agent fleetboard/fleetboard-agent --namespace fleetboard-system \
+helm install fleetboard-agent fleetboard/fleetboard-agent \
 --set hub.hubURL=https://<Hub Public IP>:6443 --set cluster.clusterID=<Cluster Alias Name>
 ```
 
@@ -45,7 +45,7 @@ helm install fleetboard-agent fleetboard/fleetboard-agent --namespace fleetboard
 To uninstall the chart:
 
 ```bash
-helm delete fleetboard-agent -n fleetboard-system
+helm delete fleetboard-agent
 ```
 
 ### Additional Setup Steps for FleetBoard
