@@ -5,4 +5,4 @@ Your release is named {{ .Release.Name }}.
 Continue to install fleetboard-agent on clusters, and install fleetboard-agent in cluster by:
 
   helm install fleetboard-agent fleetboard/fleetboard-agent \
-  --set hub.hubURL=https://{{ .Values.tunnel.endpoint }}:6443 --set cluster.clusterID=cluster1
+  --set hub.hubURL=https://{{ .Values.tunnel.endpoint }}:<apiserver-port> --set cluster.clusterID=cluster1

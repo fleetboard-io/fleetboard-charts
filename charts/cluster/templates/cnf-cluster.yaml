@@ -26,12 +26,10 @@ spec:
           command:
             - "/ep-controller"
           env:
-            - name: NAMESPACE
+            - name: FLEETBOARD_PODNAMESPACE
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
-            - name: PARALLEL_IP_ANNOTATION
-              value: "router.fleetboard.io/dedicated_ip"
           image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}/controller:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           resources:
