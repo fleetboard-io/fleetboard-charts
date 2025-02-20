@@ -14,6 +14,9 @@ cluster:
   clusterID: hub
   sharenamespace: syncer-operator
 
+hub:
+  hubURL: https://121.41.31.123:6443
+
 tunnel:
   endpoint: 121.41.31.123
   cidr: 10.112.0.0/12
