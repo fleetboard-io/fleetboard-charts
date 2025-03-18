@@ -70,7 +70,6 @@ spec:
             - /cnf/cnf
           args:
             - --shared-namespace=syncer-operator
-            - --local-namespace=syncer-operator
             - --as-hub={{ .Values.cluster.hub }}
             - --as-cluster=true
             - --hub-secret-namespace=fleetboard-system
