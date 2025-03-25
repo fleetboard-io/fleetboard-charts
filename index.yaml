@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   fleetboard:
   - apiVersion: v2
+    appVersion: 1.0.4
+    created: "2025-03-25T08:43:27.273725664Z"
+    description: A Helm chart for Tunnel across clusters.
+    digest: 725b0ba677d2f20f653af43053dfadb2a69a72d745d53c89b5f0c8ab56981311
+    name: fleetboard
+    type: application
+    urls:
+    - https://github.com/fleetboard-io/fleetboard-charts/releases/download/fleetboard-0.2.7/fleetboard-0.2.7.tgz
+    version: 0.2.7
+  - apiVersion: v2
     appVersion: 1.0.3
     created: "2025-03-18T11:07:03.662187627Z"
     description: A Helm chart for Tunnel across clusters.
@@ -62,6 +72,16 @@ entries:
     - https://github.com/fleetboard-io/fleetboard-charts/releases/download/fleetboard-0.2.0/fleetboard-0.2.0.tgz
     version: 0.2.0
   fleetboard-agent:
+  - apiVersion: v2
+    appVersion: 1.0.4
+    created: "2025-03-25T08:43:27.39644251Z"
+    description: A Helm chart for Tunnel across clusters.
+    digest: 04c40ea943b89f7b5d1c5eab495d5cce00fb8fc82937b5d2629ff9bb87b440a7
+    name: fleetboard-agent
+    type: application
+    urls:
+    - https://github.com/fleetboard-io/fleetboard-charts/releases/download/fleetboard-agent-0.2.7/fleetboard-agent-0.2.7.tgz
+    version: 0.2.7
   - apiVersion: v2
     appVersion: 1.0.3
     created: "2025-03-18T11:07:03.792616607Z"
@@ -174,4 +194,4 @@ entries:
     urls:
     - https://github.com/nauti-io/nauti-charts/releases/download/nauti-agent-0.1.0/nauti-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-18T11:07:03.792689302Z"
+generated: "2025-03-25T08:43:27.396512971Z"
